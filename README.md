@@ -1,6 +1,6 @@
 # 🎥 Loom Scraper - Videos & Folders
 
-![Hero Image](https://raw.githubusercontent.com/DZ-ABDLHAKIM/loom-scrape-pro/refs/heads/main/Screenshot%20of%20Loom%20interface%20with%20scraper%20workflow%20visualization.png)
+![loom-scrape-pro](https://raw.githubusercontent.com/DZ-ABDLHAKIM/loom-scrape-pro/refs/heads/main/Screenshot%20of%20Loom%20interface%20with%20scraper%20workflow%20visualization.png)
 
 Transform your **Loom videos into searchable, downloadable archives** with complete metadata, transcripts, and comments across individual videos and entire folders.
 
@@ -64,8 +64,6 @@ Perfect for **content creators**, **educators**, and **businesses** who need to 
 
 ## ⚙️ Smart Processing Options
 
-*[Diagram: Flowchart showing different input types and processing paths]*
-
 ### **Individual Videos**
 Process single videos with complete data extraction:
 ```
@@ -90,8 +88,6 @@ Combine videos and folders in one request:
 ---
 
 ## 🛠️ Configuration Options
-
-*[Screenshot: Apify Actor input interface with highlighted fields]*
 
 ### **Required Parameters**
 
@@ -162,7 +158,7 @@ List of Loom share URLs or video/folder IDs:
 
 ## 📊 Sample Output
 
-*[JSON viewer screenshot: Formatted output structure with syntax highlighting]*
+*![Sample_Output-of-scrape-pro](https://raw.githubusercontent.com/DZ-ABDLHAKIM/loom-scrape-pro/refs/heads/main/Sample_Output.png)*
 
 ### **Complete Video Data Structure**
 ```json
