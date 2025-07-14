@@ -263,7 +263,7 @@ List of Loom share URLs or video/folder IDs:
   </tr>
   <tr>
     <td><img src="https://raw.githubusercontent.com/DZ-ABDLHAKIM/loom-scrape-pro/refs/heads/main/clideo_editor_63b77c4309d44b2dbcbdf7d10e7cdcf1.gif" width="100%"></td>
-    <td><img src="https://raw.githubusercontent.com/DZ-ABDLHAKIM/loom-scrape-pro/refs/heads/main/clideo_editor_63b77c4309d44b2dbcbdf7d10e7cdcf2.gif" width="100%"></td>
+    <td><img src="https://raw.githubusercontent.com/DZ-ABDLHAKIM/loom-scrape-pro/refs/heads/main/clideo_editor_63b77c4309d44b2dbcbdf7d10e7cdcf1.gif" width="100%"></td>
   </tr>
 </table>
 
