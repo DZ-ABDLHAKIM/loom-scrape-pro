@@ -1,6 +1,6 @@
 # 🎥 Loom Scraper - Videos & Folders
 
-*[Hero Image: Screenshot of Loom interface with scraper workflow visualization]*
+![Hero Image](https://raw.githubusercontent.com/DZ-ABDLHAKIM/loom-scrape-pro/refs/heads/main/Screenshot%20of%20Loom%20interface%20with%20scraper%20workflow%20visualization.png)
 
 Transform your **Loom videos into searchable, downloadable archives** with complete metadata, transcripts, and comments across individual videos and entire folders.
 
