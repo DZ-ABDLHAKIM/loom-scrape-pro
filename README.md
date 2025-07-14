@@ -253,19 +253,30 @@ List of Loom share URLs or video/folder IDs:
 ### **Getting Browser Cookies**
 
 1. **Install Extension**:
-   - [Copy Cookies Extension](https://chromewebstore.google.com/detail/copy-cookies/jcbpglbplpblnagieibnemmkiamekcdg)
-   - [Cookie-Editor Extension](https://cookie-editor.com/)
 
 <table>
   <tr>
-    <td align="center"><strong>Using Copy Cookies</strong></td>
-    <td align="center"><strong>Using Cookie Editor</strong></td>
+    <td align="center">
+      <strong>
+        <a href="https://cookie-editor.com/" target="_blank">🍪 Cookie-Editor Extension</a>
+      </strong>
+    </td>
+    <td align="center">
+      <strong>
+        <a href="https://chromewebstore.google.com/detail/copy-cookies/jcbpglbplpblnagieibnemmkiamekcdg" target="_blank">📋 Copy Cookies Extension</a>
+      </strong>
+    </td>
   </tr>
   <tr>
-    <td><img src="https://raw.githubusercontent.com/DZ-ABDLHAKIM/loom-scrape-pro/refs/heads/main/clideo_editor_63b77c4309d44b2dbcbdf7d10e7cdcf1.gif" width="100%"></td>
-    <td><img src="https://raw.githubusercontent.com/DZ-ABDLHAKIM/loom-scrape-pro/refs/heads/main/clideo_editor_63b77c4309d44b2dbcbdf7d10e7cdcf1.gif" width="100%"></td>
+    <td>
+      <img src="https://raw.githubusercontent.com/DZ-ABDLHAKIM/loom-scrape-pro/refs/heads/main/add_Cookie_Editor.gif" width="100%">
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/DZ-ABDLHAKIM/loom-scrape-pro/refs/heads/main/add_Copy_Cookies.gif" width="100%">
+    </td>
   </tr>
 </table>
+
 
 2. **Export Process**:
    - Navigate to loom.com and log in
