@@ -71,7 +71,7 @@ Perfect for **content creators**, **educators**, and **businesses** who need to 
 ### **Individual Videos**
 Process single videos with complete data extraction:
 ```
-https://www.loom.com/share/388fe9c5db854403bceefe52ea85dede
+https://www.loom.com/share/VIDEO_ID
 ```
 
 ### **Entire Folders**
@@ -84,9 +84,8 @@ https://www.loom.com/share/folder/FOLDER_ID
 Combine videos and folders in one request:
 ```json
 [
-  "https://www.loom.com/share/388fe9c5db854403bceefe52ea85dede",
-  "https://www.loom.com/share/folder/abc123def456",
-  "def789ghi012"
+  "https://www.loom.com/share/08163614158646f7aa21e53997cd58e8",
+  "https://www.loom.com/share/folder/abc123def456"
 ]
 ```
 
@@ -104,15 +103,13 @@ List of Loom share URLs or video/folder IDs:
 ```json
 {
   "url": [
-    "https://www.loom.com/share/388fe9c5db854403bceefe52ea85dede",
+    "https://www.loom.com/share/08163614158646f7aa21e53997cd58e8",
     "https://www.loom.com/share/folder/abc123def456"
   ]
 }
 ```
 
 ### **Download Options**
-
-*[Visual comparison: File size indicators for different download options]*
 
 #### `downloadVideo` (Boolean)
 - **Default**: `false`
@@ -121,7 +118,7 @@ List of Loom share URLs or video/folder IDs:
 - **Use Case**: Full video archiving and offline access
 
 #### `downloadTranscript` (Boolean)
-- **Default**: `true`
+- **Default**: `false`
 - **Formats**: SRT, VTT, TXT, XML available
 - **Integration**: Ready for video players and analysis tools
 - **Search**: Enable full-text search across your library
@@ -223,7 +220,7 @@ List of Loom share URLs or video/folder IDs:
 ```json
 {
   "url": [
-    "https://www.loom.com/share/388fe9c5db854403bceefe52ea85dede"
+    "https://www.loom.com/share/08163614158646f7aa21e53997cd58e8"
   ],
   "downloadTranscript": true,
   "outputFormat": "srt"
@@ -248,10 +245,9 @@ List of Loom share URLs or video/folder IDs:
 ```json
 {
   "url": [
-    "https://www.loom.com/share/388fe9c5db854403bceefe52ea85dede",
-    "https://www.loom.com/share/folder/abc123def456",
-    "def789ghi012"
-  ],
+    "https://www.loom.com/share/08163614158646f7aa21e53997cd58e8",
+    "https://www.loom.com/share/folder/abc123def456"
+    ],
   "downloadVideo": false,
   "downloadTranscript": true,
   "outputFormat": "vtt"
