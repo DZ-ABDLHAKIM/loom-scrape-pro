@@ -258,12 +258,12 @@ List of Loom share URLs or video/folder IDs:
   <tr>
     <td align="center">
       <strong>
-        <a href="https://cookie-editor.com/" target="_blank">🍪 Cookie-Editor Extension</a>
+        <a href="https://cookie-editor.com/" target="_blank" rel="noopener noreferrer">🍪 Cookie-Editor Extension</a>
       </strong>
     </td>
     <td align="center">
       <strong>
-        <a href="https://chromewebstore.google.com/detail/copy-cookies/jcbpglbplpblnagieibnemmkiamekcdg" target="_blank">📋 Copy Cookies Extension</a>
+        <a href="https://chromewebstore.google.com/detail/copy-cookies/jcbpglbplpblnagieibnemmkiamekcdg" target="_blank" rel="noopener noreferrer">📋 Copy Cookies Extension</a>
       </strong>
     </td>
   </tr>
