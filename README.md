@@ -10,8 +10,6 @@ Perfect for **content creators**, **educators**, and **businesses** who need to 
 
 ## 🚀 Why Use This Scraper?
 
-*[Image: Split-screen comparison showing scattered Loom videos vs organized archive]*
-
 ### **📚 For Educators & Trainers**
 - **Archive online courses** and tutorial libraries
 - **Create searchable transcript databases** for student reference
@@ -131,11 +129,7 @@ List of Loom share URLs or video/folder IDs:
   - **`"txt"`**: Clean text without timestamps
   - **`"xml"`**: Full metadata structure
 
-*[Format comparison chart: Visual showing different transcript formats]*
-
 ### **Authentication Methods**
-
-*[Security diagram: Two-factor authentication flow visualization]*
 
 #### **Method 1: Email/Password** (Recommended)
 ```json
@@ -214,8 +208,6 @@ List of Loom share URLs or video/folder IDs:
 
 ## 🎯 Quick Start Examples
 
-*[Step-by-step visual guide: Screenshots showing each configuration step]*
-
 ### **Basic Video Archive**
 ```json
 {
@@ -258,21 +250,27 @@ List of Loom share URLs or video/folder IDs:
 
 ## 🔐 Authentication Guide
 
-*[Tutorial GIF: Cookie extraction process animation]*
-
 ### **Getting Browser Cookies**
+
 1. **Install Extension**:
    - [Copy Cookies Extension](https://chromewebstore.google.com/detail/copy-cookies/jcbpglbplpblnagieibnemmkiamekcdg)
    - [Cookie-Editor Extension](https://cookie-editor.com/)
 
-*[Screenshot: Browser extension installation process]*
+<table>
+  <tr>
+    <td align="center"><strong>Using Copy Cookies</strong></td>
+    <td align="center"><strong>Using Cookie Editor</strong></td>
+  </tr>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/DZ-ABDLHAKIM/loom-scrape-pro/refs/heads/main/clideo_editor_63b77c4309d44b2dbcbdf7d10e7cdcf1.gif" width="100%"></td>
+    <td><img src="https://raw.githubusercontent.com/DZ-ABDLHAKIM/loom-scrape-pro/refs/heads/main/clideo_editor_63b77c4309d44b2dbcbdf7d10e7cdcf2.gif" width="100%"></td>
+  </tr>
+</table>
 
 2. **Export Process**:
    - Navigate to loom.com and log in
    - Use extension to export cookies as JSON
    - Paste into `customCookies` parameter
-
-*[Step-by-step screenshots: Cookie extraction workflow]*
 
 3. **Authentication Priority**:
    - **Email + Password** → Fresh login (highest priority)
