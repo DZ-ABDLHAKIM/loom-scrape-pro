@@ -32,8 +32,6 @@ Perfect for **content creators**, **educators**, and **businesses** who need to 
 
 ## 🔎 What This Actor Extracts
 
-*[Infographic: Visual breakdown of extracted data types with icons]*
-
 ### 📹 **Complete Video Intelligence**
 - **📌 Video Metadata**: ID, title, description, thumbnails, creation date
 - **📊 Engagement Data**: Views, reactions, comments count
@@ -312,8 +310,6 @@ List of Loom share URLs or video/folder IDs:
 
 ## 🛠️ Troubleshooting
 
-*[FAQ accordion interface: Common issues with expandable solutions]*
-
 ### **Common Issues & Solutions**
 
 #### **Authentication Failures**
@@ -331,13 +327,9 @@ List of Loom share URLs or video/folder IDs:
 - **🔧 Enable Path**: Settings → Audience → Transcript → Toggle ON
 - **📞 Contact Creator**: Request transcript access
 
-*[Screenshot: Loom transcript settings interface]*
-
 ---
 
 ## 🤝 Support & Resources
-
-*[Contact card layout: Professional support information display]*
 
 ### **Getting Help**
 - **📧 Email**: [fridaytechnolog@gmail.com](mailto:fridaytechnolog@gmail.com)
