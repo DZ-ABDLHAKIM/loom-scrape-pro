@@ -359,8 +359,6 @@ List of Loom share URLs or video/folder IDs:
 
 ## 📜 Legal & Compliance
 
-*[Legal compliance badge: Trust indicators and certifications]*
-
 ### **Responsible Usage**
 - **✅ Public Content**: Only scrapes publicly accessible data
 - **🤖 Rate Limiting**: Respects server load limitations
@@ -372,47 +370,6 @@ List of Loom share URLs or video/folder IDs:
 - **🗑️ Auto-Cleanup**: Temporary data removal
 - **👤 Privacy Respect**: No unauthorized data collection
 - **📖 Transparency**: Clear data usage policies
-
----
-
-## 🎨 Image Placement Guide
-
-### **Recommended Image Locations:**
-
-1. **Hero Section** (Top): 
-   - Loom interface overview or workflow diagram
-   - Dimensions: 1200x600px (16:9 ratio)
-   - Style: Professional, modern UI mockup
-
-2. **Benefits Section**:
-   - Before/after comparison of organized vs disorganized content
-   - Dimensions: 800x400px
-   - Style: Split-screen comparison
-
-3. **Data Extraction Section**:
-   - Infographic showing different data types
-   - Dimensions: 1000x800px
-   - Style: Icon-based flowchart
-
-4. **Configuration Section**:
-   - Apify Actor input interface screenshot
-   - Dimensions: 900x600px
-   - Style: Clean UI screenshot with highlights
-
-5. **Authentication Section**:
-   - Cookie extraction tutorial GIF
-   - Dimensions: 600x400px
-   - Style: Animated walkthrough
-
-6. **Output Section**:
-   - JSON viewer with syntax highlighting
-   - Dimensions: 800x500px
-   - Style: Code editor screenshot
-
-7. **Troubleshooting Section**:
-   - FAQ interface or help documentation
-   - Dimensions: 700x500px
-   - Style: Clean, organized layout
 
 ---
 
