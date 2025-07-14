@@ -1,6 +1,6 @@
 # 🎥 Loom Scraper - Videos & Folders
 
-![loom-scrape-pro](https://raw.githubusercontent.com/DZ-ABDLHAKIM/loom-scrape-pro/refs/heads/main/Screenshot%20of%20Loom%20interface%20with%20scraper%20workflow%20visualization.png)
+![https://apify.com/dz_omar/loom-video-scraper](https://raw.githubusercontent.com/DZ-ABDLHAKIM/loom-scrape-pro/refs/heads/main/Screenshot%20of%20Loom%20interface%20with%20scraper%20workflow%20visualization.png)
 
 Transform your **Loom videos into searchable, downloadable archives** with complete metadata, transcripts, and comments across individual videos and entire folders.
 
@@ -286,8 +286,6 @@ List of Loom share URLs or video/folder IDs:
 
 ## 🔄 Advanced Features
 
-*[Feature comparison matrix: Visual table showing capabilities]*
-
 ### **State Management & Resumability**
 - **✅ Auto-Resume**: Continues from interruption point
 - **✅ Progress Tracking**: Real-time status updates
@@ -337,12 +335,6 @@ List of Loom share URLs or video/folder IDs:
 - **🐦 Twitter**: [@DZ_45Omar](https://x.com/DZ_45Omar)
 - **🔧 Apify**: [dz_omar](https://apify.com/dz_omar)
 
-### **Documentation**
-- **📚 Apify Docs**: Complete platform documentation
-- **💬 Community**: Join Apify community discussions
-- **🔄 Updates**: Follow repository for latest features
-- **🐛 Issues**: Report bugs and feature requests
-
 ---
 
 ## 📜 Legal & Compliance
@@ -361,9 +353,8 @@ List of Loom share URLs or video/folder IDs:
 
 ---
 
-**Version**: 2.0  
+**Version**: 1.0  
 **Last Updated**: July 2025  
-**Compatibility**: Apify Platform, Node.js 18+  
 **Status**: Active Development
 
 ---
