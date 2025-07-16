@@ -8,89 +8,50 @@ Perfect for **content creators**, **educators**, and **businesses** who need to 
 
 ---
 
-## 🚀 Why Use This Scraper?
+## 🚀 Key Benefits & Use Cases
 
 ### **📚 For Educators & Trainers**
-- **Archive online courses** and tutorial libraries
-- **Create searchable transcript databases** for student reference
-- **Backup training materials** before they expire
-- **Generate study notes** from video content automatically
+- Archive online courses and tutorial libraries with searchable transcript databases
+- Backup training materials before expiration and generate study notes automatically
+- Create comprehensive knowledge bases from video content
 
 ### **💼 For Business Teams**
-- **Archive team presentations** and meeting recordings
-- **Create knowledge databases** from video communications
-- **Backup important video assets** for compliance
-- **Generate meeting transcripts** for documentation
+- Archive team presentations, meeting recordings, and video communications
+- Generate meeting transcripts for documentation and compliance
+- Build searchable knowledge databases from organizational video content
 
 ### **🎯 For Content Creators**
-- **Bulk download video libraries** for backup
-- **Organize content catalogs** with rich metadata
-- **Create searchable video databases** with transcript search
-- **Repurpose video content** across platforms
+- Bulk download and organize video libraries with rich metadata
+- Create searchable video databases with full transcript capabilities
+- Repurpose content across platforms efficiently
 
 ---
 
-## 🔎 What This Actor Extracts
+## 🔎 Complete Data Extraction
 
-### 📹 **Complete Video Intelligence**
-- **📌 Video Metadata**: ID, title, description, thumbnails, creation date
-- **📊 Engagement Data**: Views, reactions, comments count
-- **⏱️ Technical Details**: Duration, quality, file format
-- **👤 Creator Information**: Owner name, avatar, profile data
-- **🔗 Direct Links**: Original Loom URLs and sharing links
+### 📹 **Video Intelligence**
+- **Metadata**: ID, title, description, thumbnails, creation date, duration, quality
+- **Engagement**: Views, reactions, comments count and full comment threads
+- **Technical**: File format, direct download URLs, sharing links
+- **Creator**: Owner information, avatars, profile data
 
-### 📝 **Rich Transcript Data**
-- **📄 Clean Text**: Formatted, readable transcript content
-- **⏰ Timestamps**: Precise timing for every spoken word
-- **📁 Multiple Formats**: SRT, VTT, TXT, and XML exports
-- **🔍 Searchable Content**: Full-text search capabilities
-- **💾 Download Ready**: Instant download URLs provided
+### 📝 **Transcript Processing**
+- **Multiple Formats**: SRT, VTT, TXT, XML exports with precise timestamps
+- **Clean Text**: Formatted, readable content ready for analysis
+- **Search Ready**: Full-text search capabilities across your library
+- **Integration**: Compatible with video players and analysis tools
 
-### 💬 **Complete Comment Threads**
-- **👥 User Information**: Commenter names and profiles
-- **📅 Timestamps**: When each comment was posted
-- **🧵 Thread Structure**: Organized comment hierarchies
-- **📊 Engagement Metrics**: Comment counts and interactions
-
-### 📂 **Folder Processing Power**
-- **🎯 Bulk Operations**: Process entire folders automatically
-- **📈 Progress Tracking**: Real-time folder completion status
-- **🔄 Mixed Processing**: Combine folders and individual videos
-- **📊 Batch Reports**: Summary statistics for each folder
+### 📂 **Folder Operations**
+- **Bulk Processing**: Handle entire folders automatically with progress tracking
+- **Mixed Operations**: Combine individual videos and folders in one request
+- **Batch Reports**: Summary statistics and completion status for each folder
 
 ---
 
-## ⚙️ Smart Processing Options
+## ⚙️ Configuration Options
 
-### **Individual Videos**
-Process single videos with complete data extraction:
-```
-https://www.loom.com/share/VIDEO_ID
-```
-
-### **Entire Folders**
-Bulk process all videos in a folder:
-```
-https://www.loom.com/share/folder/FOLDER_ID
-```
-
-### **Mixed Operations**
-Combine videos and folders in one request:
-```json
-[
-  "https://www.loom.com/share/08163614158646f7aa21e53997cd58e8",
-  "https://www.loom.com/share/folder/abc123def456"
-]
-```
-
----
-
-## 🛠️ Configuration Options
-
-### **Required Parameters**
-
-#### `url` (Array)
-List of Loom share URLs or video/folder IDs:
+### 🔗 **Input URLs**
+Process individual videos, entire folders, or mixed content:
 
 ```json
 {
@@ -101,42 +62,78 @@ List of Loom share URLs or video/folder IDs:
 }
 ```
 
-### **Download Options**
+### 📥 **Download Options**
 
-#### `downloadVideo` (Boolean)
+#### 🎞️ `downloadVideo` (Boolean)
 - **Default**: `false`
-- **Storage Impact**: Video files consume significant space
-- **Quality**: Original MP4 quality preserved
+- **Format**: Original MP4 quality preserved
 - **Use Case**: Full video archiving and offline access
-
-#### `downloadTranscript` (Boolean)
+- **Note**: ✅ **Works even when owner has disabled downloads** in video settings
+#### 📝 `downloadTranscript` (Boolean)
 - **Default**: `false`
-- **Formats**: SRT, VTT, TXT, XML available
 - **Integration**: Ready for video players and analysis tools
-- **Search**: Enable full-text search across your library
 
-#### `outputFormat` (String)
+#### 📄 `outputFormat` (String)
 - **Default**: `"srt"`
 - **Options**: 
-  - **`"srt"`**: Standard subtitle format (most compatible)
-  - **`"vtt"`**: Web-friendly with CSS styling support
-  - **`"txt"`**: Clean text without timestamps
-  - **`"xml"`**: Full metadata structure
+  - `"srt"`: Standard subtitle format (most compatible)
+  - `"vtt"`: Web-friendly with CSS styling support
+  - `"txt"`: Clean text without timestamps
+  - `"xml"`: Full metadata structure
 
-### **Authentication Methods**
 
-#### **Method 1: Email/Password** (Recommended)
+#### 📅 `startDate` (String)
+- **Format**: `"YYYY-MM-DD"`
+- **Purpose**: Filter videos by earliest upload date to include
+- **Use Case**: Process only recent videos or videos from specific time periods
+
+#### 📅 `endDate` (String)
+- **Format**: `"YYYY-MM-DD"`
+- **Purpose**: Filter videos by latest upload date to include
+- **Use Case**: Exclude videos uploaded after specific date
+
+---
+
+## ⚠️ Important: Memory Requirements for Video Downloads
+
+When `downloadVideo` is enabled, the Actor requires significantly more memory. **Insufficient memory will cause failures** with OOM (Out Of Memory) errors.
+
+### ✅ Recommended Memory Settings:
+
+| Use Case | Memory Required |
+|----------|----------------|
+| Metadata/transcripts only | 512MB-1024MB |
+| 1-5 video downloads | 1024MB |
+| Large folders/bulk downloads | 2048MB or more |
+
+Set memory in your run configuration: 2 GB or more
+
+### 💡 Performance Tips:
+- Process videos sequentially, not in parallel
+- Split large folders into smaller batches
+- Monitor usage from the Apify Console
+
+### 📖 **[Learn more about Apify usage and resources](https://docs.apify.com/platform/actors/running/usage-and-resources)**
+---
+
+## 🔐 Authentication & Private Content Access
+
+The Actor supports **scraping your private Loom videos** - perfect for backing up private workspaces or archiving internal content that isn't publicly shared.
+
+### **Authentication Methods** (in priority order):
+
+#### ✅ **Method 1: Email + Password** (Recommended)
 ```json
 {
   "email": "your-email@example.com",
   "password": "your-password"
 }
 ```
-- ✅ **Highest Priority**: Automatic login with fresh session
-- ✅ **Private Access**: Access private videos and folders
-- ✅ **Security**: Credentials encrypted and cleared after use
+- Automatic login with fresh session
+- Access to all private videos in your account
+- Secure credential handling (encrypted and cleared after use)
 
-#### **Method 2: Browser Cookies** (Fallback)
+#### 🍪 **Method 2: Browser Cookies** (Fallback)
 ```json
 {
   "customCookies": [
@@ -152,97 +149,6 @@ List of Loom share URLs or video/folder IDs:
 }
 ```
 
----
-
-## 📊 Sample Output
-
-*![Sample_Output-of-scrape-pro](https://raw.githubusercontent.com/DZ-ABDLHAKIM/loom-scrape-pro/refs/heads/main/Sample_Output.png)*
-
-### **Complete Video Data Structure**
-```json
-{
-  "video": {
-    "id": "388fe9c5db854403bceefe52ea85dede",
-    "title": "How to Use YouTube Scraper Effectively 🚀",
-    "url": "https://www.loom.com/share/388fe9c5db854403bceefe52ea85dede",
-    "thumbnails": "https://cdn.loom.com/sessions/thumbnails/...",
-    "created_at": "2025-07-11T09:47:40.065Z",
-    "duration_seconds": 38.28,
-    "views": 0,
-    "reactions": 7,
-    "comments_count": 6,
-    "owner": "TECH FRIDAY",
-    "avatars": "https://cdn.loom.com/avatars/...",
-    "download": {
-      "available": true,
-      "url": "https://api.apify.com/v2/key-value-stores/.../video.mp4",
-      "format": "mp4"
-    }
-  },
-  "transcript": {
-    "text": "How to use, uhm, YouTube Scraper. First, we will...",
-    "download": {
-      "format": "SRT",
-      "url": "https://api.apify.com/v2/key-value-stores/.../transcript.srt",
-      "available": true
-    }
-  },
-  "comments": [
-    {
-      "id": "100664080",
-      "username": "Mohamad Abdlrahman",
-      "content": "tyfgh",
-      "created_at": "2025-07-11T10:58:55.610Z"
-    }
-  ]
-}
-```
-
----
-
-## 🎯 Quick Start Examples
-
-### **Basic Video Archive**
-```json
-{
-  "url": [
-    "https://www.loom.com/share/08163614158646f7aa21e53997cd58e8"
-  ],
-  "downloadTranscript": true,
-  "outputFormat": "srt"
-}
-```
-
-### **Complete Folder Backup**
-```json
-{
-  "url": [
-    "https://www.loom.com/share/folder/abc123def456"
-  ],
-  "downloadVideo": true,
-  "downloadTranscript": true,
-  "outputFormat": "srt",
-  "email": "your-email@example.com",
-  "password": "your-password"
-}
-```
-
-### **Mixed Content Processing**
-```json
-{
-  "url": [
-    "https://www.loom.com/share/08163614158646f7aa21e53997cd58e8",
-    "https://www.loom.com/share/folder/abc123def456"
-    ],
-  "downloadVideo": false,
-  "downloadTranscript": true,
-  "outputFormat": "vtt"
-}
-```
-
----
-
-## 🔐 Authentication Guide
 
 ### **Getting Browser Cookies**
 
@@ -284,46 +190,135 @@ List of Loom share URLs or video/folder IDs:
 
 ---
 
+
+Process:
+1. Navigate to loom.com and log in
+2. Use extension to export cookies as JSON
+3. Paste into `customCookies` parameter
+
+**Note**: Without authentication, only public content can be accessed.
+
+---
+
+## 📊 Sample Output Structure
+
+![Sample Output](https://raw.githubusercontent.com/DZ-ABDLHAKIM/loom-scrape-pro/refs/heads/main/Sample_Output.png)
+
+```json
+{
+  "video": {
+    "id": "388fe9c5db854403bceefe52ea85dede",
+    "title": "How to Use YouTube Scraper Effectively 🚀",
+    "url": "https://www.loom.com/share/388fe9c5db854403bceefe52ea85dede",
+    "thumbnails": "https://cdn.loom.com/sessions/thumbnails/...",
+    "created_at": "2025-07-11T09:47:40.065Z",
+    "duration_seconds": 38.28,
+    "views": 0,
+    "reactions": 7,
+    "comments_count": 6,
+    "owner": "TECH FRIDAY",
+    "avatars": "https://cdn.loom.com/avatars/...",
+    "download": {
+      "available": true,
+      "url": "https://api.apify.com/v2/key-value-stores/.../video.mp4",
+      "format": "mp4"
+    }
+  },
+  "transcript": {
+    "text": "How to use, uhm, YouTube Scraper. First, we will...",
+    "download": {
+      "format": "SRT",
+      "url": "https://api.apify.com/v2/key-value-stores/.../transcript.srt",
+      "available": true
+    }
+  },
+  "comments": [
+    {
+      "id": "100664080",
+      "username": "Mohamad Abdlrahman",
+      "content": "tyfgh",
+      "created_at": "2025-07-11T10:58:55.610Z"
+    }
+  ]
+}
+```
+
+---
+
+## 🎯 Configuration Examples
+
+### **Basic Video Archive**
+```json
+{
+  "url": [
+    "https://www.loom.com/share/08163614158646f7aa21e53997cd58e8"
+  ],
+  "downloadTranscript": true,
+  "outputFormat": "srt"
+}
+```
+
+### **Complete Folder Backup**
+```json
+{
+  "url": [
+    "https://www.loom.com/share/folder/abc123def456"
+  ],
+  "downloadVideo": true,
+  "downloadTranscript": true,
+  "outputFormat": "srt",
+  "email": "your-email@example.com",
+  "password": "your-password"
+}
+```
+Set memory in your run configuration: 2 GB or more
+
+### **Mixed Content Processing**
+```json
+{
+  "url": [
+    "https://www.loom.com/share/08163614158646f7aa21e53997cd58e8",
+    "https://www.loom.com/share/folder/abc123def456"
+  ],
+  "downloadVideo": false,
+  "downloadTranscript": true,
+  "outputFormat": "vtt"
+}
+```
+
+---
+
 ## 🔄 Advanced Features
 
-### **State Management & Resumability**
-- **✅ Auto-Resume**: Continues from interruption point
-- **✅ Progress Tracking**: Real-time status updates
-- **✅ Migration Support**: Handles platform updates
-- **✅ Folder Progress**: Individual completion tracking
+### **Reliability & Performance**
+- **State Management**: Auto-resume from interruption points with progress tracking
+- **Error Handling**: Robust recovery with automatic retry mechanisms
+- **Storage Optimization**: Efficient file organization with direct download URLs
+- **Detailed Logging**: Complete processing history and performance monitoring
 
-### **Error Handling & Reliability**
-- **🛡️ Robust Recovery**: Automatic retry mechanisms
-- **📊 Detailed Logging**: Complete processing history
-- **🔄 Fallback Methods**: Multiple authentication options
-- **📈 Performance Monitoring**: Real-time metrics
-
-### **Storage & Downloads**
-- **💾 Optimized Storage**: Efficient file organization
-- **🔗 Direct URLs**: Instant download access
-- **📁 Batch Processing**: Efficient bulk operations
-- **🗂️ Organized Output**: Structured file naming
+### **Content Processing**
+- **Platform Updates**: Migration support for Loom platform changes
+- **Batch Operations**: Efficient bulk processing with folder progress tracking
+- **Multiple Formats**: Structured file naming and organized output
 
 ---
 
 ## 🛠️ Troubleshooting
 
-### **Common Issues & Solutions**
+### **Authentication Issues**
+- **Verify credentials**: Check email/password accuracy
+- **Update cookies**: Ensure browser cookies are current
+- **Try fallback**: Use alternative authentication method
 
-#### **Authentication Failures**
-- **✅ Check credentials**: Verify email/password accuracy
-- **🔄 Try cookies**: Use browser cookie method as fallback
-- **📅 Update cookies**: Ensure cookies are current
+### **Missing Content**
+- **Transcripts**: Must be enabled by video owner (Settings → Audience → Transcript → Toggle ON)
+- **Private videos**: Requires valid authentication
+- **Permissions**: Verify sharing permissions with content creator
 
-#### **Private Content Access**
-- **🔑 Authentication**: Ensure proper account access
-- **👥 Permissions**: Verify sharing permissions
-- **⚙️ Settings**: Check creator's privacy settings
-
-#### **Missing Transcripts**
-- **📝 Creator Settings**: Transcripts must be enabled by video owner
-- **🔧 Enable Path**: Settings → Audience → Transcript → Toggle ON
-- **📞 Contact Creator**: Request transcript access
+### **Performance Issues**
+- **Memory errors**: Increase memory allocation for video downloads
+- **Large folders**: Split into smaller batches
+- **Slow processing**: Check network connection and Loom server status
 
 ---
 
@@ -335,26 +330,14 @@ List of Loom share URLs or video/folder IDs:
 - **🐦 Twitter**: [@DZ_45Omar](https://x.com/DZ_45Omar)
 - **🔧 Apify**: [dz_omar](https://apify.com/dz_omar)
 
----
-
-## 📜 Legal & Compliance
-
-### **Responsible Usage**
-- **✅ Public Content**: Only scrapes publicly accessible data
-- **🤖 Rate Limiting**: Respects server load limitations
-- **📋 Terms Compliance**: Follows Loom's terms of service
-- **🔒 No Bypassing**: Doesn't circumvent security measures
-
-### **Data Protection**
-- **🔐 Secure Processing**: Encrypted credential handling
-- **🗑️ Auto-Cleanup**: Temporary data removal
-- **👤 Privacy Respect**: No unauthorized data collection
-- **📖 Transparency**: Clear data usage policies
+### **Legal & Compliance**
+- **Responsible Usage**: Only scrapes publicly accessible data with proper rate limiting
+- **Terms Compliance**: Follows Loom's terms of service without bypassing security
+- **Data Protection**: Encrypted credential handling with automatic cleanup
+- **Privacy Respect**: No unauthorized data collection with transparent usage policies
 
 ---
 
-**Version**: 1.0  
+**Version**: 2.x  
 **Last Updated**: July 2025  
 **Status**: Active Development
-
----
