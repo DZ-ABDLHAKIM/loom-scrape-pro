@@ -48,6 +48,22 @@ Perfect for **content creators**, **educators**, and **businesses** who need to 
 
 ---
 
+## ⚠️ Important: Account Videos vs Individual URLs
+
+### **Account Videos Processing** (`includeAccountVideos: true`)
+- Processes **all videos from your Loom account**
+- Supports date filtering (`startDate`, `endDate`)
+- Supports custom sorting (`videoSortOrder`)
+- Requires authentication (email/password or cookies)
+
+### **Individual URL Processing** (default behavior)
+- Processes **only the specific URLs you provide**
+- Date filters and sort order are **ignored**
+- Works with or without authentication
+- Processes videos in the order you list them
+
+---
+
 ## ⚙️ Configuration Options
 
 ### 🔗 **Input URLs**
@@ -69,6 +85,7 @@ Process individual videos, entire folders, or mixed content:
 - **Format**: Original MP4 quality preserved
 - **Use Case**: Full video archiving and offline access
 - **Note**: ✅ **Works even when owner has disabled downloads** in video settings
+
 #### 📝 `downloadTranscript` (Boolean)
 - **Default**: `false`
 - **Integration**: Ready for video players and analysis tools
@@ -81,16 +98,28 @@ Process individual videos, entire folders, or mixed content:
   - `"txt"`: Clean text without timestamps
   - `"xml"`: Full metadata structure
 
+### 🔐 **Account Videos Options** (Only when `includeAccountVideos` is enabled)
+
+These parameters only work when scraping your own Loom account videos. They have no effect when processing individual video URLs or public folders.
 
 #### 📅 `startDate` (String)
+- **Default**: `"2016-01-01"`
 - **Format**: `"YYYY-MM-DD"`
-- **Purpose**: Filter videos by earliest upload date to include
-- **Use Case**: Process only recent videos or videos from specific time periods
+- **Purpose**: Filter videos by earliest upload date to include from your account
+- **⚠️ Note**: Only applies to your own account videos, not individual URLs
 
 #### 📅 `endDate` (String)
+- **Default**: `"2030-12-31"`
 - **Format**: `"YYYY-MM-DD"`
-- **Purpose**: Filter videos by latest upload date to include
-- **Use Case**: Exclude videos uploaded after specific date
+- **Purpose**: Filter videos by latest upload date to include from your account
+- **⚠️ Note**: Only applies to your own account videos, not individual URLs
+
+#### 📅 `videoSortOrder` (String)
+- **Default**: `"ASC"`
+- **Options**: 
+  - `"ASC"`: Oldest to Newest - Shows the earliest videos first
+  - `"DESC"`: Newest to Oldest - Shows the most recently uploaded videos first
+- **⚠️ Note**: Only applies when processing your own account videos, not individual URLs or folders
 
 ---
 
@@ -273,16 +302,33 @@ Process:
 ```
 Set memory in your run configuration: 2 GB or more
 
-### **Mixed Content Processing**
+### **Account Videos with Date Filter & Sort**
+```json
+{
+  "includeAccountVideos": true,
+  "downloadTranscript": true,
+  "outputFormat": "srt",
+  "startDate": "2024-01-01",
+  "endDate": "2024-12-31",
+  "videoSortOrder": "DESC",
+  "email": "your-email@example.com",
+  "password": "your-password"
+}
+```
+
+### **Mixed Content: URLs + Account Videos**
 ```json
 {
   "url": [
     "https://www.loom.com/share/08163614158646f7aa21e53997cd58e8",
     "https://www.loom.com/share/folder/abc123def456"
   ],
+  "includeAccountVideos": true,
   "downloadVideo": false,
   "downloadTranscript": true,
-  "outputFormat": "vtt"
+  "outputFormat": "vtt",
+  "startDate": "2024-06-01",
+  "videoSortOrder": "DESC"
 }
 ```
 
